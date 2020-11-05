@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="popup.js"></script>
+
+	<title>ParentGuard</title>
+    <link href="StyleSheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+</head>
+<body style="background-color: azure">
+    <div id="rectangle" style="background: #87CEEB"></div><br>
+    <img src="senior_logo.png"; class="center"; height="180px">
+    <h1 style="font-family:Brush Script Std; font-size: 68px; text-align: center">ParentGuard</h1>
+    
+    <ul>
+      <li>Select the way to prevent abusive messages</li>
+        <input type="radio" name="creditCheck" id="c01" value="Censor" checked/>Censor
+        <br>
+        <input type="radio" name="creditCheck" id="c02" value="Paraphrase" />Paraphrase
+        <br>
+        <input type="radio" name="creditCheck" id="c03" value="Neither" />Neither of them
+<!--
+      <li>Live page monitoring
+        <label class="switch">
+          <input id="live_page_monitoring" type="checkbox">
+          <span class="slider round"></span>
+        </label>    
+      </li>
+-->
+      <li>Give advices to your child
+        <label class="switch">
+          <input id="advice" type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>  
+      </li>
+<!--
+      <li>Requires notifications about bullying
+          <label class="switch">
+          <input id="notify_bullying" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </li>
+-->
+      <li>Requires notifications about accessing too many abusive contents
+        <label class="switch">
+          <input id="notify_abusive_access" type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+      </li>
+      <li>Automatically unlike abusive pages
+          <label class="switch">
+          <input id="unlike_abusive_page" type="checkbox" checked>
+          <span class="slider round"></span>
+        </label></li>
+    
+    </ul>
+    <p align="center"><button class="btn btn-primary btn-sm">Apply</button></p>
+    
+  <ul class="nav justify-content-left">
+      <li class="nav-item">
+        <a class="nav-link active" href="page_monitoring.html" target="_blank">Page Reports</a>
+      </li>
+    </ul>
+
+</body>
+</html>
+
+<!--
+    <button style="float: right"; class="btn btn-primary btn-sm">Page Report</button>
+        <script type="text/javascript" src = "popup.js" charset="utf-8"></script>
+-->
