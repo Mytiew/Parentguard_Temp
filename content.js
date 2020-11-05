@@ -79,11 +79,12 @@ function classify(el, preventWay, url) {
   if (preventWay === "paraphrase") {
     $.post(`${api_url}/para`, { javascript_data: el.innerText }, (data) => {
       el.innerText = data;
-      //  el.style.backgroundColor = 'yellow'
+      el.style.backgroundColor = 'yellow'
     });
   } else if (preventWay === "censor") {
     console.log(preventWay);
     $.post(`${api_url}/`, { javascript_data: el.innerText }, (data) => {
+        console.log(`${el.innerText} is offensive = ${data}`)
       if (data === "True") {
         el.style.backgroundColor = "transparent";
         el.style.textShadow = "0 0 5px rgba(0,0,0,0.5)";
@@ -96,47 +97,6 @@ function classify(el, preventWay, url) {
       }
     });
   }
-
-  //   $.post(
-  //     api_url,
-  //     {
-  //       javascript_data: el.innerText,
-  //     },
-  //     function (data) {
-  //       if (data) {
-  //         if (preventWay == "censor") {
-  //           el.style.backgroundColor = "transparent";
-  //           el.style.textShadow = "0 0 5px rgba(0,0,0,0.5)";
-  //           al = el.querySelectorAll("*");
-  //           for (var i = 0; i < al.length; i++) {
-  //             al[i].style.color = "transparent";
-  //             al[i].style.backgroundColor = "transparent";
-  //             al[i].style.textShadow = "0 0 5px rgba(0,0,0,0.5)";
-  //           }
-  //         } else if (preventWay == "paraphrase") {
-  //           $.post(
-  //             `${api_url}/para`,
-  //             {
-  //               javascript_data: el.innerText,
-  //             },
-  //             function (data) {
-  //               el.innerText = data;
-  //               el.style.backgroundColor = "yellow";
-  //             }
-  //           );
-  //         }
-
-  //         if (isAdviced == undefined) isAdviced = true;
-  //         if (isAdviced == true) adviceFeature(url);
-
-  //         if (isAccessed == undefined) isAccessed = true;
-  //         if (isAccessed == true) TooMuchAccessFeature(url);
-
-  //         if (isUnliked == undefined) isUnliked = true;
-  //         if (isUnliked == true) UnlikePageFeature(url);
-  //       }
-  //     }
-  //   );
 }
 
 chrome.extension.onMessage.addListener(function (
