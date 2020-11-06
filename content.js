@@ -42,22 +42,9 @@ function likedPage() {
 $(window).scroll(function () {
   var scroll = $(window).scrollTop();
   if (scroll > position) {
-    posts_logged_in = document.querySelectorAll(
-      'div[data-ad-comet-preview="message"]'
+    data_logout = document.querySelectorAll(
+      'div[data-ad-comet-preview="message"], div.kvgmc6g5.cxmmr5t8.oygrvhab.hcukyx3x.c1et5uql, div[data-testid="post_message"], span._3l3x, div#u_0_0, span.fwb.fcg, a._6qw4, a#js_h._6qw4, div._3oba, div._1-h1._3q_l, div._1-h1._3q_m'
     );
-    comments_logged_in = document.querySelectorAll(
-      "div.kvgmc6g5.cxmmr5t8.oygrvhab.hcukyx3x.c1et5uql"
-    );
-    posts_logged_out = document.querySelectorAll(
-      'div[data-testid="post_message"]'
-    );
-    comments_logged_out = document.querySelectorAll("span._3l3x");
-
-    page_name_on_profile = document.querySelectorAll("div#u_0_0");
-    page_name_on_post = document.querySelectorAll("span.fwb.fcg");
-    page_name_comments = document.querySelectorAll("a._6qw4");
-    page_name_comments2 = document.querySelectorAll("a#js_h._6qw4");
-
     page_name_profile_logon = document.querySelectorAll(
       "#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.rq0escxv.l9j0dhe7.du4w35lb > div > div > div.j83agx80.cbu4d94t.d6urw2fd.dp1hu0rb.l9j0dhe7.du4w35lb > div.l9j0dhe7.dp1hu0rb.cbu4d94t.j83agx80 > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.pfnyh3mw.taijpn5t.gs1a9yip.owycx6da.btwxx1t3.ihqw7lf3.cddn0xzi > div > div > div > div.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.cbu4d94t.g5gj957u.d2edcug0.hpfvmrgz.on77hlbc.buofh1pr.o8rfisnq.ph5uu5jm.b3onmgus.ihqw7lf3.ecm0bbzt > div > div > div:nth-child(1) > h2 > span > span"
     );
@@ -70,26 +57,23 @@ $(window).scroll(function () {
     page_name_scroll_logon = document.querySelectorAll(
       "#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.rq0escxv.l9j0dhe7.du4w35lb > div > div > div.j83agx80.cbu4d94t.d6urw2fd.dp1hu0rb.l9j0dhe7.du4w35lb > div.l9j0dhe7.dp1hu0rb.cbu4d94t.j83agx80 > div.rq0escxv.lpgh02oy.du4w35lb.rek2kq2y > div > div > div > div.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.cbu4d94t.g5gj957u.d2edcug0.hpfvmrgz.rj1gh0hx.buofh1pr > div > div > div.rq0escxv.pmk7jnqg.du4w35lb.j83agx80.pfnyh3mw.i1fnvgqd.gs1a9yip.owycx6da.btwxx1t3.datstx6m.pedkr2u6.i42f9fw1.n1dktuyu.k4urcfbm.dvqrsczn.l23jz15m.d4752i1f > div > div > div > div > a > div.ow4ym5g4.auili1gw.rq0escxv.j83agx80.buofh1pr.g5gj957u.i1fnvgqd.oygrvhab.cxmmr5t8.hcukyx3x.kvgmc6g5.nnctdnn4.hpfvmrgz.qt6c0cv9.jb3vyjys.l9j0dhe7.du4w35lb.bp9cbjyn.btwxx1t3.dflh9lhu.scb9dxdr > div.ow4ym5g4.auili1gw.rq0escxv.j83agx80.buofh1pr.g5gj957u.i1fnvgqd.oygrvhab.cxmmr5t8.hcukyx3x.kvgmc6g5.tgvbjcpo.hpfvmrgz.qt6c0cv9.rz4wbd8a.a8nywdso.jb3vyjys.du4w35lb.bp9cbjyn.btwxx1t3.l9j0dhe7 > div > div > div > div > span > span"
     );
+    page_name_logon_ = document.querySelectorAll(
+      'div.gmql0nx0.l94mrbxd.p1ri9a11.lzcic4wl.aahdfvyu.hzawbc8m, strong, div[class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d9wwppkn fe6kdd0r mau55g9w c8b282yb mdeji52x e9vueds3 j5wam9gi lrazzd5p oo9gr5id"], span[class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d9wwppkn fe6kdd0r mau55g9w c8b282yb mdeji52x e9vueds3 j5wam9gi lrazzd5p oo9gr5id"]'
+    );
 
-    posts = [...posts_logged_in, ...posts_logged_out];
-    comments = [...comments_logged_in, ...comments_logged_out];
-    pagenames = [
-      ...page_name_on_post,
-      ...page_name_on_profile,
-      ...page_name_comments,
-      ...page_name_comments2,
+    data_logon = [
       ...page_name_profile_logon,
       ...page_name_post_logon,
       ...page_name_comment_logon,
       ...page_name_scroll_logon,
+      ...page_name_logon_,
     ];
 
-    fb_datas = [...posts, ...comments, ...pagenames];
-
+    fb_datas = [...data_logout, ...data_logon];
     fb_datas
-      // .filter((fb_data) => {
-      //   return !all.includes(fb_data);
-      // })
+      .filter((fb_data) => {
+        return !all.includes(fb_data);
+      })
       .map((fb_data) => {
         all.push(fb_data);
         req(fb_data);
